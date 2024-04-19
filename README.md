@@ -19,30 +19,80 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
-
+def linearsearch(a,b,array):
+    for i in range(0,b):
+        if array[i]==a:
+            return i
+    return -1
+array=eval(input())
+a=int(input())
+b=len(array)
+array.sort()
+result=linearsearch(a,b,array)
+if(result==-1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-
-
-
+def binarySearchIter(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+array = eval(input())
+array.sort()
+k = eval(input()) 
+print(array)
+res=binarySearchIter(array,k,0,len(array)-1)
+if res==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",res)
 
 
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
-
-
+def binarySearchIter(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+array = eval(input())
+array.sort()
+k = eval(input()) 
+print(array)
+res=binarySearchIter(array,k,0,len(array)-1)
+if res==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",res)
 
 
 ```
 ## Sample Input and Output
 
+![Screenshot 2024-04-19 105053](https://github.com/pavithraselvaraj30/Search-Algorithms/assets/149366880/3dcb9f87-3e72-40d0-a099-e75a0264122a)
 
+![Screenshot 2024-04-19 105123](https://github.com/pavithraselvaraj30/Search-Algorithms/assets/149366880/2e82695d-276c-4012-b372-ac7da1e4c42f)
 
+![Screenshot 2024-04-19 105140](https://github.com/pavithraselvaraj30/Search-Algorithms/assets/149366880/4aba8404-ad2b-4a71-a2e7-8532bc35eeff)
 
 
 
